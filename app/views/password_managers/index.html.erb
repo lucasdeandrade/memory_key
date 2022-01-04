@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Password Managers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Password</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @password_managers.each do |password_manager| %>
+      <tr>
+        <td><%= password_manager.name %></td>
+        <td><%= password_manager.password %></td>
+        <td><%= link_to 'Show', password_manager %></td>
+        <td><%= link_to 'Edit', edit_password_manager_path(password_manager) %></td>
+        <td><%= link_to 'Destroy', password_manager, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Password Manager', new_password_manager_path %>

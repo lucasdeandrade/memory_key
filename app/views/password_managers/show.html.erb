@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @password_manager.name %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @password_manager.password %>
+</p>
+
+<%= link_to 'Edit', edit_password_manager_path(@password_manager) %> |
+<%= link_to 'Back', password_managers_path %>
